@@ -8,13 +8,15 @@ import os
 import itertools
 import numpy as np
 from sklearn.metrics import confusion_matrix
+from tensorfow.keras.layers import Dense
+from tensorflow.keras import Sequential,layers
 
 def extract_zip_file(File_name):
     zip_ref = zipfile.ZipFile(File_name, "r")
     zip_ref.extractall()
     zip_ref.close()
     
-def walkthrough(dir)
+def walkthrough(dir):
     for dirpath, dirnames, filenames in os.walk("dir"):
         print(f"There are {dirnames} directories and {len(filenames)} images in '{dirpath}'.")
 
